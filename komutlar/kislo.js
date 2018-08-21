@@ -13,7 +13,7 @@ exports.run = function(client, message) {
         *Havanın hayatımızdaki en büyük rolünü
    *Anlatmaya gerek yok bence :D Discorddada bu geçerlidir ;)
    `, true)
-   .addField("Sevdiği İş", `Banlamak :D`, true)
+   .addField("Kislo Sahibi", `Kislo#1441`, true)
    .addField("Merhaba Ben Kislo", "Naber :D")
    
 
