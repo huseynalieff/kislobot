@@ -160,4 +160,17 @@ client.on('error', e => {
 });
 
 
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find('name', 'hoşgeldiniz');
+  if (!channel) return;
+  const embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setAuthor(member.user.username, member.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle(' ✌️ | Sunucuya Katıldı | Hoşgeldin ')
+  .setTimestamp()
+  channel.sendEmbed(embed);
+});
+
+
 client.login(process.env.BOT_TOKEN);
