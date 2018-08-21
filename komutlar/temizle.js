@@ -18,6 +18,6 @@ exports.conf = {
 
 exports.help = {
   name: 'temizle', 
-  description: 'Belirtilen miktarda mesaj siler',
+  description: 'Belirtilen miktarda mesaj siler. Sadece sunucu sahibi ve moderatörler',
   usage: 'temizle <miktar>'
 };
