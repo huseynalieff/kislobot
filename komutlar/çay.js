@@ -14,7 +14,7 @@ exports.run = function(client, message) {
         *biz, çayın yalnızlığa iyi gelen tarafını da severiz. Avuçlarken ince belli bardağı,
    *hücrelere kadar hissettiren sıcaklığında unuttuk yalnızlığı.
    `, true)
-   
+   .addField("Benimde bir sözüm vardır", `Dur çayımı yuduyluyum`, true)
    .addField("Oksijeni (Kislo) bilmem ama yaşamak için çay şart :D", "")
    
 
