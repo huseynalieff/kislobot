@@ -1,5 +1,4 @@
 module.exports = member => {
-    let username = member.user.username;
-    member.sendMessage('Hoş geldin **' + username + '**!');
-    member.guild.defaultChannel.sendMessage('hg '+username+'');
+    let guild = member.guild;
+  guild.defaultChannel.sendMessage(`Welcome ${member.user} to this server.`).catch(console.error);
 };
