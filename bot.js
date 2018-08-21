@@ -69,6 +69,13 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'kislo sahibi') {
+   
+    msg.reply('Benim sahibim Kislo#1441!');
+  }
+});
+
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
