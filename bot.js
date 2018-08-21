@@ -34,6 +34,13 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'piç,amk') {
+   msg.delete(30)
+    msg.reply('Reklam Engellendi');
+  }
+});
+
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
