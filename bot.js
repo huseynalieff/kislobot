@@ -78,26 +78,9 @@ client.unload = command => {
   });
 };
 
-
-client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'genel');
-  if (!channel) return;
-  const embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setAuthor(member.user.tag, member.user.avatarURL || member.user.defaultAvatarURL)
-  .setThumbnail(member.user.avatarURL || member.user.defaultAvatarURL)
-  .setTitle('Sunucuya Katıldı,Hoşgeldin ')
-  .setDescription(`Sunucuya katıldı [${member.guild.memberCount} üye]!`)
-  .setFooter('Kislo Bot',client.user.avatarURL)
-  .setTimestamp()
-  channel.send(embed);
-});
-
-
-
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
-		if (!msg.guild.member(msg.author).hasPermission("BAN_MEMBERS")) {
+		if (!msg.guild.member(msg.author).hasPermission("SEND_MESSAGES")) {
 			msg.author.sendMessage('Aleyküm selam,  hoş geldin ^^'); 
 		} else {
 		msg.reply('Aleyküm selam, hoş geldin ^^');
