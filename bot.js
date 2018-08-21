@@ -85,6 +85,11 @@ client.on('message', msg => {
 		} else {
 		msg.reply('Aleyküm selam dostum, hoş geldin ^^');
 		}
+	  
+	  if (msg.content.toLowerCase() === prefix + 'bing') {
+    msg.reply('Bong! **' + client.ping + '** ms');
+  }
+	  
 	}
 });
 
