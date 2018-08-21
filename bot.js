@@ -62,20 +62,6 @@ client.load = command => {
   });
 };
 
-
-client.on('message', msg => {
-  console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
-  if (msg.author.id === ayarlar.id) return;
-  if (msg.author.bot) return;
-
-  if (!msg.content.startsWith(prefix)) {
-	  return;
-  }
-}
-});
-
-
-
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -92,9 +78,16 @@ client.unload = command => {
   });
 };
 
-
-
-
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+		if (!msg.guild.member(msg.author).hasPermission("SEND_MESSAGES")) {
+			msg.author.sendMessage('Aleyküm selam dostum, hoş geldin ^^'); 
+		} else {
+		msg.reply('Aleyküm selam dostum, hoş geldin ^^');
+		}
+		
+	}
+});
 
 client.elevation = message => {
   if(!message.guild) {
