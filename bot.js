@@ -35,9 +35,30 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'piç,amk') {
+  if (msg.content === 'amk') {
    msg.delete(30)
-    msg.reply('Reklam Engellendi');
+    msg.reply('Küfür Engellendi!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'piç') {
+   msg.delete(30)
+    msg.reply('Küfür Engellendi!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'sikim') {
+   msg.delete(30)
+    msg.reply('Küfür Engellendi!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'sg') {
+   msg.delete(30)
+    msg.reply('Küfür Engellendi!');
   }
 });
 
