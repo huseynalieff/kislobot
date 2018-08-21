@@ -1,0 +1,34 @@
+const Discord = require('discord.js');
+
+
+exports.run = function(client, message) {
+ 
+    const embed = new Discord.RichEmbed()
+        .setDescription("**KISLO**")
+        .setImage("https://kislobot.cf/kislorodicon.png")
+        .setThumbnail("https://kislobot.cf/kislodiscordicon.png")
+        .setColor(0x00AE86)
+        .addField("Lakabı", "Kislo (Kislorodun kısalması ve Hava anlamına gelir)", true)
+        .addField("Yetenekleri", `
+        *Havanın hayatımızdaki en büyük rolünü
+   *Anlatmaya gerek yok bence :D Discorddada bu geçerlidir ;)
+   `, true)
+   .addField("Sevdiği İş", `Banlamak :D`, true)
+   .addField("Merhaba Ben Kislo", "Naber :D")
+   
+
+   message.channel.send(embed)
+};
+
+exports.conf = {
+  enabled: true, 
+  guildOnly: false, 
+  aliases: [],
+  permLevel: 0 
+};
+
+exports.help = {
+  name: 'kislo', 
+  description: 'Kislo hakkında bilgi verir',
+  usage: 'kislo'
+};
