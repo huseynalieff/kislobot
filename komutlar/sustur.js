@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Susturulmuş');
   if (!modlog) return message.reply('`genel` kanalını bulamıyorum.').catch(console.error);
   if (!muteRole) return message.reply('`Susturulmuş` adlı bir rol bulamıyorum.').catch(console.error);
-  if (reason.length < 1) return message.reply('Susturma sebebini yazmalısın.').catch(console.error);
+  
   if (message.mentions.users.size < 1) return message.reply('Kimi susturacağını yazmalısın.').catch(console.error);
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
