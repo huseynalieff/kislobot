@@ -70,9 +70,9 @@ client.on('guildMemberAdd', member => {
   .setColor('RANDOM')
   .setAuthor(member.user.tag, member.user.avatarURL || member.user.defaultAvatarURL)
   .setThumbnail(member.user.avatarURL || member.user.defaultAvatarURL)
-  .setTitle('Sunucuya Katıldı,Hoşgeldin ')
+  .setTitle('Sunucuya Katıldı,Hoşgeldin;')
   .setDescription(`Sunucuya katıldı [${member.guild.memberCount} üye]!`)
-  .setFooter('Kislo Bot',client.user.avatarURL)
+  .setFooter('Kislo Bot', client.user.avatarURL)
   .setTimestamp()
   channel.send(embed);
 });
