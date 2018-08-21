@@ -35,6 +35,6 @@ exports.conf = {
 
 exports.help = {
   name: 'uyar',
-  description: 'İstediğiniz kişiyi uyarır.',
+  description: 'İstediğiniz kişiyi uyarır.Dikkat! mod-log kanalına ihtiyacınız var bu komut için',
   usage: 'uyar [kullanıcı] [sebep]'
 };
