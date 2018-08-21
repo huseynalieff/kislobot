@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 exports.run = function(client, message) {
  
     const embed = new Discord.RichEmbed()
-	    .setAuthor(message.author.username)
+	    .setAuthor(message.author.username, message.author.avatarURL)
         .setDescription("**GEL ÇAYIMIN ŞEKERİ**")
         .setImage("https://i2.wp.com/www.oyunkaynagi.com/wp-content/uploads/2017/09/cropped-cay-cay-bardagi-kahvalti-cay-simit-incebelli-bardak-resimleri-V070220151622-N-21.png?ssl=1")
         .setThumbnail("https://i2.wp.com/www.oyunkaynagi.com/wp-content/uploads/2017/09/cropped-cay-cay-bardagi-kahvalti-cay-simit-incebelli-bardak-resimleri-V070220151622-N-21.png?ssl=1")
@@ -15,7 +15,7 @@ exports.run = function(client, message) {
    *hücrelere kadar hissettiren sıcaklığında unuttuk yalnızlığı.
    `, true)
    .addField("Benimde bir sözüm vardır", `Dur çayımı yuduyluyum`, true)
-   .addField("Oksijeni (Kislo) bilmem ama yaşamak için çay şart :D", "")
+   .addField("Oksijeni (Kislo) bilmem ama yaşamak için çay şart", "Limon atıyımmı ?")
    
 
    message.channel.send(embed)
