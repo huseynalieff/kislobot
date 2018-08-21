@@ -71,6 +71,7 @@ client.on('message', msg => {
   if (!msg.content.startsWith(prefix)) {
 	  return;
   }
+}
 });
 
 
