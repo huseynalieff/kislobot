@@ -64,17 +64,15 @@ client.load = command => {
 
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'genel');
+  const channel = member.guild.channels.find('name', 'giris-cıkıs');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setAuthor(member.user.tag, member.user.avatarURL || member.user.defaultAvatarURL)
-  .setThumbnail(member.user.avatarURL || member.user.defaultAvatarURL)
-  .setTitle('Sunucuya Katıldı,Hoşgeldin;')
-  .setDescription(`Sunucuya katıldı [${member.guild.memberCount} üye]!`)
-  .setFooter('Kislo Bot', client.user.avatarURL)
+  .setAuthor(member.user.username, member.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle('📤 | Sunucuya Katıldı | Hoşgeldin ')
   .setTimestamp()
-  channel.send(embed);
+  channel.sendEmbed(embed);
 });
 
 
