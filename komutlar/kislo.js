@@ -5,8 +5,8 @@ exports.run = function(client, message) {
  
     const embed = new Discord.RichEmbed()
         .setDescription("**KISLO**")
-        .setImage("https://kislobot.cf/kislorodicon.png")
-        .setThumbnail("https://kislobot.cf/kislodiscordicon.png")
+        .setImage("http://kislobot.cf/kislorodicon.png")
+        .setThumbnail("http://kislobot.cf/kislodiscordicon.png")
         .setColor(0x00AE86)
         .addField("Lakabı", "Kislo (Kislorodun kısalması ve Hava anlamına gelir)", true)
         .addField("Yetenekleri", `
