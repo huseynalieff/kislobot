@@ -81,11 +81,10 @@ client.unload = command => {
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
 		if (!msg.guild.member(msg.author).hasPermission("SEND_MESSAGES")) {
-			msg.author.sendMessage('Aleyküm selam dostum, hoş geldin ^^'); 
+			msg.author.sendMessage('Aleyküm selam,  hoş geldin ^^'); 
 		} else {
-		msg.reply('Aleyküm selam dostum, hoş geldin ^^');
+		msg.reply('Aleyküm selam, hoş geldin ^^');
 		}
-		
 	}
 });
 
@@ -109,4 +108,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(ayarlar.token);
