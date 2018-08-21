@@ -27,6 +27,13 @@ fs.readdir('./komutlar/', (err, files) => {
   });
 });
 
+client.on('message', msg => {
+  if (msg.content === 'discord.gg') {
+   msg.delete(30)
+    msg.reply('Reklam Engellendi');
+  }
+});
+
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
