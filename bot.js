@@ -64,7 +64,7 @@ client.load = command => {
 
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'giris-cıkıs');
+  const channel = member.guild.channels.find('name', 'genel');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
