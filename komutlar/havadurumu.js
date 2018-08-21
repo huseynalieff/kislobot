@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const client = new discord.Client();
 module.exports.run = async(bot, message, args) => {
-const api = 'https://api.openweathermap.org/data/2.5/weather?q=' + args[0] + '&appid=9085d68629e6d57983a2c93a8fa2cd66';
+const api = 'http://api.openweathermap.org/data/2.5/weather?q=' + args[0] + '&appid=9085d68629e6d57983a2c93a8fa2cd66';
  let mesaj = args.slice(0).join(' ');
  if (mesaj.length < 1) return message.reply(':no_entry: Lütfen hava durumu bilgisini getirtmek için bir şehir ismi girin.');
  try {
@@ -122,7 +122,7 @@ return text;
 
 		const embed = new discord.RichEmbed()
     .setTitle(json.name + ','   + sys.country +   ' için Hava Durumu')
-    .setThumbnail('https://openweathermap.org/img/w/' + weather.icon + '.png')
+    .setThumbnail('http://openweathermap.org/img/w/' + weather.icon + '.png')
     .setColor(0xff7f00)
     .addField('Koordinatları', 'Enlem: **' + coord.lat + '**\nBoylam: **' + coord.lon + '**', inline=true)
     .addField('Şehrin IDsi', '**' + json.id + '**', inline=true)
