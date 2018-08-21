@@ -63,16 +63,14 @@ client.load = command => {
 };
 
 
-client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'genel');
-  if (!channel) return;
-  const embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setAuthor(member.user.username, member.user.avatarURL)
-  .setThumbnail(member.user.avatarURL)
-  .setTitle('📤 | Sunucuya Katıldı | Hoşgeldin ')
-  .setTimestamp()
-  channel.sendEmbed(embed);
+client.on('message', msg => {
+  console.log(`LOG: S: ${msg.guild.name} M: ${msg.content} Y: ${msg.author.tag}`);
+  if (msg.author.id === ayarlar.id) return;
+  if (msg.author.bot) return;
+
+  if (!msg.content.startsWith(prefix)) {
+	  return;
+  }
 });
 
 
