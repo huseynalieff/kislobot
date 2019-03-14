@@ -4,7 +4,7 @@ const client = new Discord.Client();
 exports.run = (client, message) => {
  message.channel.send({embed: {
                author: {
-                   name: "Genel Sürüm : 1.0 - Yapılan değişiklikler",
+                   name: "Genel Sürüm : 2.0 - Yapılan değişiklikler",
                    icon_url: ""
                  },
                color: 0xD97634,
