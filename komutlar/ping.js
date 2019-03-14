@@ -1,20 +1,26 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js')
 
+exports.run = async (client, message, args) => {
+	const msg = await message.channel.send("Bekle biraz. Gerekli verileri hesaplıyorum... 🤔");
+	var ping = Math.round(message.createdTimestamp - msg.createdTimestamp)
 
-exports.run = function(client, message) {
+	if(ping < 0) {
+		var ping = Math.round(msg.createdTimestamp - message.createdTimestamp)
+	}
 
-    message.channel.send("Pingim **" + client.ping + "** ms!");
-};
+	msg.edit(`Mesaj gecikme süresi: ${ping} milisaniye\nBot gecikme süresi: ${client.ping} milisaniye`)
+}
 
 exports.conf = {
-  enabled: true, 
-  guildOnly: true, 
-  aliases: ['p'],
-  permLevel: 0 
-};
+	enabled: true,
+	guildOnly: false,
+	aliases: [],
+	permLevel: 0,
+	kategori: 'kullanıcı'
+}
 
 exports.help = {
-  name: 'ping', 
-  description: 'Botun pingini gösterir',
-  usage: 'ping'
-};
+	name: 'ping',
+	description: 'Botun gecikme süresini gösterir.',
+	usage: 'ping'
+}
